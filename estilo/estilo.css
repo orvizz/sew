@@ -5,3 +5,61 @@
 
 /* Estilos generales del proyecto MotoGP Desktop*/
 
+/* Especifidad = 001 */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F5F5F5;
+    /* Blanco humo como fondo general */
+    color: #212121;
+    border: 0;
+    margin: 0;
+}
+
+/* Especifidad = 001 */
+header {
+    background-color: #D32F2F;
+    /* Rojo intenso para header */
+    padding: 1rem;
+}
+
+/* Especifidad = 001 */
+h1 {
+    color: #FFEB3B;
+    /* Amarillo neón para resaltar el título */
+    margin: 0;
+}
+
+/* Especifidad = 002 */
+h1 a {
+    color: inherit;
+    text-decoration: none;
+    /* Elimina el subrayado del enlace */
+}
+
+
+
+/* Navegación */
+/* Especifidad = 001 */
+nav {
+    color: #d0d0d0;
+    /* Gris asfalto para el texto del nav */
+}
+
+/* Especifidad = 002 */
+nav a {
+    color: inherit;
+    /* Usa el color definido en nav */
+    text-decoration: none;
+    margin-right: 1rem;
+    font-weight: bold;
+    /* Transición de entrada y salida */
+    transition: color 0.4s ease, font-size 0.4s ease;
+
+}
+
+/* Especifidad = 012 */
+nav a:hover {
+    color: #FFEB3B;
+    /* Amarillo neón al pasar el cursor */
+    font-size: large;
+}
