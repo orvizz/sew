@@ -15,23 +15,41 @@ body {
     margin: 0;
 }
 
+/* Especifidad = 002 */
+header + p {
+    font-size: smaller;
+}
+
 /* Especifidad = 001 */
 header {
-    background-color: #D32F2F;
-    /* Rojo intenso para header */
+    background-color: #972020;
+    /* hereda color de body */
     padding: 1rem;
 }
 
 /* Especifidad = 001 */
 h1 {
-    color: #FFEB3B;
-    /* Amarillo neón para resaltar el título */
+    color: #fff067;
+    background-color: inherit;
+    /* Hereda background-color de header */
     margin: 0;
 }
 
+/*Especificidad = 013*/
+header nav a.active {
+    color: #fff067;
+    background-color: inherit;
+    font-weight: bold;
+    /* Hereda background-color de header */
+}
+
 /* Especifidad = 002 */
-h1 a {
+header a {
     color: inherit;
+    /* Hereda color de h1 */
+    background-color: inherit;
+    /* Hereda background-color de header */
+
     text-decoration: none;
     /* Elimina el subrayado del enlace */
 }
@@ -41,7 +59,7 @@ h1 a {
 /* Navegación */
 /* Especifidad = 001 */
 nav {
-    color: #d0d0d0;
+    color: #EDEDED;
     /* Gris asfalto para el texto del nav */
 }
 
@@ -49,9 +67,7 @@ nav {
 nav a {
     color: inherit;
     /* Usa el color definido en nav */
-    text-decoration: none;
     margin-right: 1rem;
-    font-weight: bold;
     /* Transición de entrada y salida */
     transition: color 0.4s ease, font-size 0.4s ease;
 
@@ -59,7 +75,28 @@ nav a {
 
 /* Especifidad = 012 */
 nav a:hover {
-    color: #FFEB3B;
+    color: #fff067;
     /* Amarillo neón al pasar el cursor */
     font-size: large;
+}
+
+/* Especificidad = 001 */
+table{
+    border-collapse: collapse;
+    width: 100%;
+    border: 0.2em solid;
+}
+
+/* Especificidad = 001 */
+th {
+    font-weight: bold;
+    border-collapse: collapse;
+    border: 0.1em solid #000000;
+}
+
+/* Especifidad = 001 */
+tbody, td {
+    text-align: center;
+    border-collapse: collapse;
+    border: 0.1em solid #000000;
 }

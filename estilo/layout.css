@@ -1,0 +1,76 @@
+/*
+* Mario Orviz Viesca
+* UO295180
+*/
+/* Estilos de layout para el proyecto MotoGP */
+
+/* Especifidad = 001 */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Especifidad = 002 */
+header h1 {
+    margin: 0;
+    flex: 1 1 auto;
+}
+
+/* Especifidad = 002 */
+header nav {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Especifidad = 002 */
+nav a {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+/* Especifidad = 012 */
+nav a:last-child {
+    margin-right: 0;
+}
+
+table {
+    table-layout: fixed;
+    
+}
+
+@media (min-width: 320px) and (max-width: 799px){
+    
+    /*Especificidad = 001*/
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /*Especificidad = 002*/
+    header nav {
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: smaller;
+    }
+
+    /* Especifidad = 002 */
+    header + p{
+        display: none;
+    }
+
+    /* Especifidad = 001 */
+    video, audio {
+        width: 100%;
+        height: auto;
+    }
+
+}
