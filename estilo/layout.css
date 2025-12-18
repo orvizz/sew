@@ -3,6 +3,20 @@
 * UO295180
 */
 /* Estilos de layout para el proyecto MotoGP */
+/* Epecifidad = 001 */
+body {
+    min-height: 100vh;
+
+}
+
+
+/* Aplica margen a todo el contenido dentro del body excepto al header */
+/* Selecciona los hijos directos de body que no sean header */
+/* Especifidad = 002 */
+body>*:not(header) {
+    margin: 1rem;
+}
+
 
 /* Especifidad = 001 */
 header {
@@ -12,6 +26,8 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+
 
 /* Especifidad = 002 */
 header h1 {
@@ -43,11 +59,53 @@ nav a:last-child {
 
 table {
     table-layout: fixed;
-    
+
 }
 
-@media (min-width: 320px) and (max-width: 799px){
-    
+/* Especifidad = 003 */
+article h2+img {
+    vertical-align: middle;
+    align-items: center;
+    margin-left: 5%;
+    width: 90%;
+    height: auto;
+}
+
+/* Especifidad = 002 */
+main>section>img {
+    display: block;
+    margin: 1rem auto;
+    max-width: 90%;
+    height: auto;
+}
+
+/* Especifidad = 002 */
+main>div {
+    width: 90vw;
+    height: 70vh;
+    margin-top: 2em;
+    border: 0.2em solid #ccc;
+    border-radius: 1em;
+}
+
+/* Especifidad = 002 */
+main>svg {
+    display: block;
+    margin: 1rem auto;
+    max-width: 90%;
+    height: auto;
+}
+
+/* Especifidad = 001 */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+@media (min-width: 320px) and (max-width: 799px) {
+
     /*Especificidad = 001*/
     header {
         flex-direction: column;
@@ -63,14 +121,25 @@ table {
     }
 
     /* Especifidad = 002 */
-    header + p{
+    header+p {
         display: none;
     }
 
     /* Especifidad = 001 */
-    video, audio {
+    video,
+    audio {
         width: 100%;
+    }
+
+    /* Especifidad = 001 */
+    video {
         height: auto;
+    }
+
+    /* Especifidad = 002 */
+    main>div,
+    main>svg {
+        width: 100%;
     }
 
 }

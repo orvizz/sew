@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<circuito
+    xsi:schemaLocation="http://www.uniovi.es circuito.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.uniovi.es">
+    <nombre>
+        Circuito de Silverstone
+    </nombre>
+    <longitudCircuito unidad="metros">
+        5891
+    </longitudCircuito>
+    <anchuraMedia unidad="metros">
+        15
+    </anchuraMedia>
+    <fechaCarrera>
+        2025-05-25
+    </fechaCarrera>
+    <hora>
+        14:00:00
+    </hora>
+    <numVueltas>
+        20
+    </numVueltas>
+    <locProx>
+        Silversone
+    </locProx>
+    <pais>
+        Reino Unido
+    </pais>
+    <nombrePatrocinador>
+        Tissot
+    </nombrePatrocinador>
+    <referencias>
+        <referencia>https://www.silverstone.co.uk/about/our-history</referencia>
+        <referencia>https://www.motogp.com/es/calendar/2025/event/great-britain/98f03e76-5837-4b99-a5a5-57c367c8ba1b?tab=overview</referencia>
+        <referencia>https://es.wikipedia.org/wiki/Circuito_de_Silverstone</referencia>
+    </referencias>
+    <galeriaFoto>
+        <foto>
+            <url>Silverstone_GPmap_2010.jpg</url>
+            <description>Mapa del circuito Silverstone</description>
+        </foto>
+        <foto>
+            <url>Silverstone.jpg</url>
+            <description>Vista del circuito Silversotne</description>
+        </foto>
+    </galeriaFoto>
+
+    <galeriaVideo>
+        <video>
+            <url>Silversstone_air.mp4</url>
+            <description>Vídeo del circuito Silverstone desde el aire</description>
+        </video>
+    </galeriaVideo>
+
+    <origen>
+        <coordenada>
+            <latitud>52.069167</latitud>
+            <longitud>-1.022222</longitud>
+            <altitud>145.85</altitud>
+        </coordenada>
+    </origen>
+    <tramos>
+        <!-- Curva 1: Abbey -->
+        <tramo>
+            <coordenada>
+                <latitud>52.071111</latitud>
+                <longitud>-1.019445</longitud>
+                <altitud>149.55</altitud>
+            </coordenada>
+            <distancia unidad="metros">286.44</distancia>
+            <sector>1</sector>
+        </tramo>
+        <!-- Curva 2: Farm -->
+        <tramo>
+            <coordenada>
+                <latitud>52.071111</latitud>
+                <longitud>-1.016389</longitud>
+                <altitud>152.04</altitud>
+            </coordenada>
+            <distancia unidad="metros">201.66</distancia>
+            <sector>1</sector>
+        </tramo>
+        <!-- Curva 3: Village -->
+        <tramo>
+            <coordenada>
+                <latitud>52.072500</latitud>
+                <longitud>-1.013056</longitud>
+                <altitud>153.86</altitud>
+            </coordenada>
+            <distancia unidad="metros">270.82</distancia>
+            <sector>2</sector>
+        </tramo>
+        <!-- Curva 4: The Loop -->
+        <tramo>
+            <coordenada>
+                <latitud>52.071111</latitud>
+                <longitud>-1.012222</longitud>
+                <altitud>155.61</altitud>
+            </coordenada>
+            <distancia unidad="metros">142.77</distancia>
+            <sector>2</sector>
+        </tramo>
+        <!-- Curva 5: Aintree -->
+        <tramo>
+            <coordenada>
+                <latitud>52.072778</latitud>
+                <longitud>-1.011389</longitud>
+                <altitud>154.67</altitud>
+            </coordenada>
+            <distancia unidad="metros">205.1</distancia>
+            <sector>2</sector>
+        </tramo>
+        <!-- Curva 6: Wellington Straight -->
+        <tramo>
+            <coordenada>
+                <latitud>52.076945</latitud>
+                <longitud>-1.019167</longitud>
+                <altitud>151.32</altitud>
+            </coordenada>
+            <distancia unidad="metros">713.04</distancia>
+            <sector>2</sector>
+        </tramo>
+        <!-- Curva 7: Brooklands -->
+        <tramo>
+            <coordenada>
+                <latitud>52.075833</latitud>
+                <longitud>-1.020278</longitud>
+                <altitud>153.02</altitud>
+            </coordenada>
+            <distancia unidad="metros">164.5</distancia>
+            <sector>3</sector>
+        </tramo>
+        <!-- Curva 8: Luffield -->
+        <tramo>
+            <coordenada>
+                <latitud>52.076111</latitud>
+                <longitud>-1.021389</longitud>
+                <altitud>152.48</altitud>
+            </coordenada>
+            <distancia unidad="metros">130.9</distancia>
+            <sector>3</sector>
+        </tramo>
+        <!-- Curva 9: Copse -->
+        <tramo>
+            <coordenada>
+                <latitud>52.078334</latitud>
+                <longitud>-1.019167</longitud>
+                <altitud>150.75</altitud>
+            </coordenada>
+            <distancia unidad="metros">291.85</distancia>
+            <sector>3</sector>
+        </tramo>
+        <!-- Curva 10: Maggotts -->
+        <tramo>
+            <coordenada>
+                <latitud>52.078611</latitud>
+                <longitud>-1.011389</longitud>
+                <altitud>153.68</altitud>
+            </coordenada>
+            <distancia unidad="metros">540.48</distancia>
+            <sector>4</sector>
+        </tramo>
+        <!-- Curva 11: Becketts -->
+        <tramo>
+            <coordenada>
+                <latitud>52.073334</latitud>
+                <longitud>-1.009444</longitud>
+                <altitud>153.96</altitud>
+            </coordenada>
+            <distancia unidad="metros">617.4</distancia>
+            <sector>4</sector>
+        </tramo>
+        <!-- Curva 12: Chapel -->
+        <tramo>
+            <coordenada>
+                <latitud>52.071945</latitud>
+                <longitud>-1.010000</longitud>
+                <altitud>154.91</altitud>
+            </coordenada>
+            <distancia unidad="metros">147.34</distancia>
+            <sector>4</sector>
+        </tramo>
+        <!-- Curva 13: Stowe -->
+        <tramo>
+            <coordenada>
+                <latitud>52.070556</latitud>
+                <longitud>-1.009167</longitud>
+                <altitud>153.39</altitud>
+            </coordenada>
+            <distancia unidad="metros">147.72</distancia>
+            <sector>5</sector>
+        </tramo>
+        <!-- Curva 14: Vale -->
+        <tramo>
+            <coordenada>
+                <latitud>52.070000</latitud>
+                <longitud>-1.010556</longitud>
+                <altitud>151.87</altitud>
+            </coordenada>
+            <distancia unidad="metros">117.54</distancia>
+            <sector>5</sector>
+        </tramo>
+        <!-- Curva 15: Club -->
+        <tramo>
+            <coordenada>
+                <latitud>52.063333</latitud>
+                <longitud>-1.017500</longitud>
+                <altitud>151.24</altitud>
+            </coordenada>
+            <distancia unidad="metros">900.84</distancia>
+            <sector>5</sector>
+        </tramo>
+        <!-- Curva 16: Hamilton Straight -->
+        <tramo>
+            <coordenada>
+                <latitud>52.066389</latitud>
+                <longitud>-1.021945</longitud>
+                <altitud>145.89</altitud>
+            </coordenada>
+            <distancia unidad="metros">479.36</distancia>
+            <sector>1</sector>
+        </tramo>
+        <!-- Curva 17: Vale (de nuevo) -->
+        <tramo>
+            <coordenada>
+                <latitud>52.066111</latitud>
+                <longitud>-1.022778</longitud>
+                <altitud>146.34</altitud>
+            </coordenada>
+            <distancia unidad="metros">50.89</distancia>
+            <sector>1</sector>
+        </tramo>
+        <!-- Curva 18: Club (de nuevo) -->
+        <tramo>
+            <coordenada>
+                <latitud>52.067500</latitud>
+                <longitud>-1.024167</longitud>
+                <altitud>145.27</altitud>
+            </coordenada>
+            <distancia unidad="metros">189.09</distancia>
+            <sector>1</sector>
+        </tramo>
+        <tramo>
+            <coordenada>
+                <latitud>52.069167</latitud>
+                <longitud>-1.022222</longitud>
+                <altitud>145.81</altitud>
+            </coordenada>
+            <distancia unidad="metros">238.6</distancia>
+            <sector>1</sector>
+        </tramo>
+    </tramos>
+    <vencedor>
+        <nombrePiloto>Marco Bezzecchi</nombrePiloto>
+        <tiempo>PT38M16.037S</tiempo>
+    </vencedor>
+    <clasificados>
+        <nombrePiloto>Marco Bezzecchi</nombrePiloto>
+        <nombrePiloto>Johann Zarco</nombrePiloto>
+        <nombrePiloto>Marc Márquez</nombrePiloto>
+    </clasificados>
+</circuito>

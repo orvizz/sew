@@ -1,0 +1,45 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 0.5em;
+
+    justify-items: center;
+    width: 80%;
+    max-width: 40em;
+    padding: 0.5em;
+
+    /*border: 2px dashed red;*/
+
+    box-sizing: border-box;
+    /* protege de desbordes invisibles */
+    margin-inline: auto;
+    /* centra horizontal */
+    margin-block: auto;
+    /* centra vertical */
+}
+
+main h2 {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    width: 100%;
+    text-align: center;
+}
+
+main p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+@media (max-width: 799px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on smaller screens */
+        grid-template-rows: repeat(6, auto);
+        /* rows adjust automatically */
+    }
+}

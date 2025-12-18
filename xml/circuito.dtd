@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT circuito (nombre, longitudCircuito, anchuraMedia, fechaCarrera, hora, numVueltas, locProx, pais, nombrePatrocinador, referencias, galeriaFoto, galeriaVideo, origen, tramos, vencedor, clasificados)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT longitudCircuito (#PCDATA)>
+<!ELEMENT anchuraMedia (#PCDATA)>
+<!ELEMENT fechaCarrera (#PCDATA)>
+<!ELEMENT hora (#PCDATA)>
+<!ELEMENT numVueltas (#PCDATA)>
+<!ELEMENT locProx (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT nombrePatrocinador (#PCDATA)>
+<!ELEMENT referencias (referencia*)>
+<!ELEMENT referencia (#PCDATA)>
+<!ELEMENT galeriaFoto (foto+)>
+<!ELEMENT foto (url, description)>
+<!ELEMENT galeriaVideo (video+)>
+<!ELEMENT video (url, description)>
+<!ELEMENT origen (coordenada)>
+<!ELEMENT coordenada (latitud, longitud, altitud)>
+<!ELEMENT longitud (#PCDATA)>
+<!ELEMENT latitud (#PCDATA)>
+<!ELEMENT altitud (#PCDATA)>
+<!ELEMENT tramos (tramo+)>
+<!ELEMENT tramo (coordenada, distancia, sector)>
+<!ELEMENT distancia (#PCDATA)>
+<!ELEMENT sector (#PCDATA)>
+<!ELEMENT vencedor (nombrePiloto, tiempo)>
+<!ELEMENT nombrePiloto (#PCDATA)>
+<!ELEMENT tiempo (#PCDATA)>
+<!ELEMENT clasificados (nombrePiloto+)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ATTLIST longitudCircuito unidad CDATA #REQUIRED>
+<!ATTLIST anchuraMedia unidad CDATA #REQUIRED>
+<!ATTLIST distancia unidad CDATA #REQUIRED>

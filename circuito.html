@@ -13,7 +13,11 @@
     <link type="text/css" rel="stylesheet" href="estilo/layout.css" />
     <title>MotoGP - Circuito</title>
     <link rel="icon" type="image/ico" href="multimedia/imagenes/moto-1.ico" sizes="48x48">
-
+    <script src="js/circuito.js"></script>
+    <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSHqfAJo3R5iQg33EC9bHwxc4e4SV057s&libraries=maps,marker"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -23,7 +27,7 @@
         <nav>
             <a href="index.html" title="Inicio">Inicio</a>
             <a href="piloto.html" title="Piloto">Piloto</a>
-            <a href="clasificaciones.html" title="Clasificaciones">Clasificaciones</a>
+            <a href="clasificaciones.php" title="Clasificaciones">Clasificaciones</a>
             <a href="meteorologia.html" title="Meteorologia">Meteorología</a>
             <a href="circuito.html" title="Circuito" class="active">Circuito</a>
             <a href="juegos.html" title="Juegos">Juegos</a>
@@ -31,9 +35,29 @@
         </nav>
     </header>
     <p>Estás en: <a href="index.html" title="Inicio">Inicio</a> >> <strong>Circuito</strong></p>
-    <p>En desarrollo</p>
-    <h2>Circuito de MotoGP</h2>
+    <main>
+        <script>
+            let circuito, cargadorSVG, cargadorKML;
 
+            window.addEventListener("DOMContentLoaded", () => {
+                circuito = new Circuito();
+                cargadorSVG = new CargadorSVG();
+                cargadorKML = new CargadorKML();
+            });
+        </script>
+        <p>
+            <label for="file-html">Leer HTML:</label>
+            <input type="file" id="file-html" onchange="circuito.leerArchivoHTML(this.files)" />.html
+        </p>
+        <p>
+            <label for="file-svg">Leer SVG:</label>
+            <input type="file" id="file-svg" onchange="cargadorSVG.leerArchivoSVG(this.files)" />.svg</p>
+        <p>
+            <label for="file-kml">Leer KML:</label>
+            <input type="file" id="file-kml" onchange="cargadorKML.leerArchivoKML(this.files)" />.kml
+        </p>
+        <div></div>
+    </main>
 </body>
 
 </html>

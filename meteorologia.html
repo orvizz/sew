@@ -13,17 +13,19 @@
     <link type="text/css" rel="stylesheet" href="estilo/layout.css" />
     <title>MotoGP - Meteorología</title>
     <link rel="icon" type="image/ico" href="multimedia/imagenes/moto-1.ico" sizes="48x48">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/cuidad.js"></script>
 </head>
 
 <body>
+    <script>var ciudad = new Ciudad("Towcester", "Great Britain", "Towcestrians");</script>
     <!-- Datos con el contenidos que aparece en el navegador -->
     <header>
         <h1><a href="index.html" title="inicio">MotoGP Desktop</a></h1>
         <nav>
             <a href="index.html" title="Inicio">Inicio</a>
             <a href="piloto.html" title="Piloto">Piloto</a>
-            <a href="clasificaciones.html" title="Clasificaciones">Clasificaciones</a>
+            <a href="clasificaciones.php" title="Clasificaciones">Clasificaciones</a>
             <a href="meteorologia.html" title="Meteorologia" class="active">Meteorología</a>
             <a href="circuito.html" title="Circuito">Circuito</a>
             <a href="juegos.html" title="Juegos">Juegos</a>
@@ -35,6 +37,17 @@
 
     <p>En desarrollo</p>
     <h2>Meteorología de MotoGP</h2>
+    <script>
+        ciudad.rellenarDatos(11542, 52.1351, -0.9897);
+        ciudad.writeTitle();
+        ciudad.writeGentilicioYPoblacion();
+        ciudad.writeCoordenadas();
+        ciudad.getMeteorologiaCarrera();
+        //ciudad.getMeteorologiaEntrenos();
+    </script>
+    <main>
+        
+    </main>
 </body>
 
 </html>

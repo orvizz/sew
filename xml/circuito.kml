@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+    <name>
+        Circuito de Silverstone
+    </name>
+    <Placemark>
+        <name>Recorrido del circuito</name>
+        <Style>
+            <LineStyle>
+                <color>ff0000ff</color> <!-- rojo -->
+                <width>3</width>
+            </LineStyle>
+        </Style>
+        <LineString>
+            <tessellate>1</tessellate>
+            <altitudeMode>clampToGround</altitudeMode>
+            <coordinates>
+                -1.022222,52.069167,0
+                -1.019445,52.071111,0
+                -1.016389,52.071111,0
+                -1.013056,52.072500,0
+                -1.012222,52.071111,0
+                -1.011389,52.072778,0
+                -1.019167,52.076945,0
+                -1.020278,52.075833,0
+                -1.021389,52.076111,0
+                -1.019167,52.078334,0
+                -1.011389,52.078611,0
+                -1.009444,52.073334,0
+                -1.010000,52.071945,0
+                -1.009167,52.070556,0
+                -1.010556,52.070000,0
+                -1.017500,52.063333,0
+                -1.021945,52.066389,0
+                -1.022778,52.066111,0
+                -1.024167,52.067500,0
+                -1.022222,52.069167,0
+            </coordinates>
+        </LineString>
+    </Placemark>
+</Document>
+</kml>
