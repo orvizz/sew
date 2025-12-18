@@ -9,7 +9,6 @@ main {
     width: 80%;
     max-width: 40em;
     padding: 0.5em;
-
     /*border: 2px dashed red;*/
 
     box-sizing: border-box;
@@ -18,6 +17,8 @@ main {
     /* centra horizontal */
     margin-block: auto;
     /* centra vertical */
+    overflow-x: hidden;
+
 }
 
 /* Especifidad = 002 */
@@ -36,7 +37,15 @@ main p {
     text-align: center;
 }
 
+/* Especifidad = 002 */
+main article {
+    min-width: 0;
+}
 
+/* Especifidad = 001 */
+body {
+    overflow-x: hidden;
+}
 
 @media (max-width: 799px) {
     /* Especifidad = 001 */
@@ -45,5 +54,9 @@ main p {
         grid-template-columns: repeat(2, 1fr);
         /* Redefinición de las filas para pantallas pequeñas */
         grid-template-rows: repeat(6, auto);
+        /* Redefinición del ancho para pantallas pequeñas */
+        width: 100%;
+        /* Redefinición del ancho máximo para pantallas pequeñas */
+        max-width: 100%;
     }
 }
