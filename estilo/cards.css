@@ -29,7 +29,6 @@ main article[data-estado=volteada] {
 
 /* Reglas con los estilos generales para el encabezado y la imagen de la carta */
 /* especificidad: 002 */
-/* especificidad: 002 */
 article h3,
 article img {
     width: 100%;
@@ -37,6 +36,7 @@ article img {
     position: absolute;
     border-radius: 0.5em;
     background: #1C7CCC;
+    /* Color heredado de body */
     object-fit: contain;
     backface-visibility: hidden;
 }

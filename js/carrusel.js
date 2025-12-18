@@ -30,6 +30,8 @@ class Carrusel {
             },
             method: "GET",
             success: (data) => {
+                const article = document.createElement('article');
+                document.querySelector('body').appendChild(article);
                 this.#mostrarFotografias(data);
             },
             error: this.#manejarError.bind(this),
@@ -55,16 +57,16 @@ class Carrusel {
     }
 
     #cambiarFotografia() {
-        const section = document.querySelector("article");
-        section.innerHTML = "";
+        const article = document.querySelector("article");
+        article.innerHTML = "";
         const h2 = document.createElement("h2");
         h2.textContent = `Imágenes del circuito de Silverstone`;
-        section.appendChild(h2);
+        article.appendChild(h2);
         const img = document.createElement("img");
         img.src = this.#fotosUrls[this.#actual];
         img.alt = this.#fotosTitle[this.#actual];
         console.log("Mostrando imagen:", img.src);
-        section.appendChild(img);
+        article.appendChild(img);
         this.#actual = (this.#actual + 1) % this.#maximo;
     }
 

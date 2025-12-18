@@ -13,7 +13,7 @@ class Noticias {
 
     procesarInformacion(data) {
         console.log("Datos recibidos de la API de noticias:", data);
-        const section = document.querySelector("section");
+        const section = document.createElement("section");
         const h2 = document.createElement("h2");
         h2.textContent = "Noticias sobre MotoGP en Silverstone";
         section.appendChild(h2);   
@@ -35,6 +35,7 @@ class Noticias {
             article.appendChild(fuente);
             section.appendChild(article);
         });
+        document.querySelector("body").appendChild(section);
     }
 
     mockNoticias() {

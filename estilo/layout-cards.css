@@ -1,3 +1,4 @@
+/* Especifidad = 001 */
 main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -19,6 +20,7 @@ main {
     /* centra vertical */
 }
 
+/* Especifidad = 002 */
 main h2 {
     grid-column: 1 / -1;
     grid-row: 1;
@@ -26,6 +28,7 @@ main h2 {
     text-align: center;
 }
 
+/* Especifidad = 002 */
 main p {
     grid-column: 1 / -1;
     grid-row: 2;
@@ -36,10 +39,11 @@ main p {
 
 
 @media (max-width: 799px) {
+    /* Especifidad = 001 */
     main {
+        /* Redefinición de las columnas para pantallas pequeñas */
         grid-template-columns: repeat(2, 1fr);
-        /* 2 columns on smaller screens */
+        /* Redefinición de las filas para pantallas pequeñas */
         grid-template-rows: repeat(6, auto);
-        /* rows adjust automatically */
     }
 }

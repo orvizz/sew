@@ -1,58 +1,58 @@
-class Ciudad{
+class Ciudad {
     #nombre;
     #pais;
     #gentilicio
     #poblacion;
     #latCentro;
     #lonCentro;
-    constructor(nombre, pais, gentilicio){
+    constructor(nombre, pais, gentilicio) {
         this.#nombre = nombre;
         this.#pais = pais;
         this.#gentilicio = gentilicio;
     }
 
-    rellenarDatos(poblacion, latCentro, lonCentro){
+    rellenarDatos(poblacion, latCentro, lonCentro) {
         this.#poblacion = poblacion;
         this.#latCentro = latCentro;
         this.#lonCentro = lonCentro;
     }
 
-    getNombre(){
+    getNombre() {
         return this.#nombre;
     }
 
-    getPais(){
+    getPais() {
         return this.#pais;
     }
 
-    getGentilicioYPoblacion(){
+    getGentilicioYPoblacion() {
         return `<li>Gentilicio: ${this.#gentilicio}</li><li>Población: ${this.#poblacion} habitantes</li>`;
     }
 
     writeTitle() {
         const h3 = document.createElement("h3");
         h3.textContent = `Ciudad: ${this.getNombre()} (${this.getPais()})`;
-        document.body.appendChild(h3);
+        document.querySelector("main").appendChild(h3);
     }
 
-    writeGentilicioYPoblacion(){
+    writeGentilicioYPoblacion() {
         const ul = document.createElement("ul");
         ul.innerHTML = this.getGentilicioYPoblacion();
-        document.body.appendChild(ul);
+        document.querySelector("main").appendChild(ul);
     }
 
-    writeCoordenadas(){
+    writeCoordenadas() {
         const p = document.createElement("p");
         p.textContent = `Coordenadas: Longitud ${this.#lonCentro} - Latitud ${this.#latCentro}`;
-        document.body.appendChild(p);
+        document.querySelector("main").appendChild(p);
     }
 
-    getMeteorologiaCarrera(){
+    getMeteorologiaCarrera() {
         let endpoint = "https://archive-api.open-meteo.com/v1/archive?";
         let data_requested = "&daily=sunrise,sunset&hourly=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,wind_direction_10m,rain&timezone=Europe%2FLondon";
         let date = "&start_date=2025-05-25&end_date=2025-05-25"
         $.ajax({
-            url: endpoint + "latitude="+this.#latCentro + "&longitude=" + this.#lonCentro + date + data_requested,
+            url: endpoint + "latitude=" + this.#latCentro + "&longitude=" + this.#lonCentro + date + data_requested,
             method: "GET",
             dataType: "json",
             success: (data) => {
@@ -80,7 +80,6 @@ class Ciudad{
             daily_units,
         } = apiResponse;
 
-        // Procesar datos horarios (arrays paralelos)
         const hourlyData = hourly.time.map((t, index) => ({
             time: new Date(t),
             temperature: hourly.temperature_2m[index],
@@ -95,7 +94,6 @@ class Ciudad{
         console.log("Datos horarios:");
         console.log(hourlyData);
 
-        // Procesar datos diarios
         const dailyData = daily.time.map((t, index) => ({
             date: new Date(t),
             sunrise: new Date(daily.sunrise[index]),
@@ -106,10 +104,13 @@ class Ciudad{
         console.log("Datos diarios:");
         console.log(dailyData);
 
+        const meteorologiaSection = $("<section></section>");
+
+        meteorologiaSection.append(`<h3>Meteorología el día de la carrera (por horas)</h3>`);
+
         for (let hour of hourlyData) {
             const hourStr = hour.time.toTimeString().split(" ")[0];
-            console.log(`Hora: ${hourStr}, Temp: ${hour.temperature}°C, Sensación: ${hour.apparentTemperature}°C, Viento: ${hour.windSpeed} km/h, Humedad: ${hour.humidity}%, Rain: ${hour.rain} mm`);
-            $("main").append(document.createElement("section").innerHTML = `
+            const hourSection = $("<section></section>").html(`
                 <h4>Hora: ${hourStr}</h4>
                 <ul>
                     <li>Temperatura: ${hour.temperature} °C</li>
@@ -120,8 +121,10 @@ class Ciudad{
                     <li>Humedad Relativa: ${hour.humidity} %</li>
                 </ul>
             `);
+
+            meteorologiaSection.append(hourSection);
         }
-        // Construimos una salida organizada
+        $("main").append(meteorologiaSection);
         return {
             location: {
                 latitude,
@@ -139,7 +142,7 @@ class Ciudad{
         let data_requested = "&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m,rain&timezone=Europe%2FLondon";
         let date = "&start_date=2025-05-22&end_date=2025-05-24"
         $.ajax({
-            url: endpoint + "latitude="+this.#latCentro + "&longitude=" + this.#lonCentro + date + data_requested,
+            url: endpoint + "latitude=" + this.#latCentro + "&longitude=" + this.#lonCentro + date + data_requested,
             method: "GET",
             dataType: "json",
             success: (data) => {
@@ -162,7 +165,6 @@ class Ciudad{
             hourly,
             hourly_units,
         } = apiResponse;
-        // Procesar datos horarios (arrays paralelos)
         const hourlyData = hourly.time.map((t, index) => ({
             time: new Date(t),
             temperature: hourly.temperature_2m[index],
@@ -173,10 +175,8 @@ class Ciudad{
         }));
         console.log("Datos horarios de entrenos:");
         console.log(hourlyData);
-        // Agrupar por día y calcular medias para cada variable
         const aggregates = {};
         for (const h of hourlyData) {
-            // Ajustar la hora a la zona GMT+2 antes de extraer la fecha
             const offsetHours = 2; // GMT+2
             const localDate = new Date(h.time.getTime() + offsetHours * 60 * 60 * 1000);
             const dateStr = localDate.toISOString().split('T')[0];
@@ -208,11 +208,10 @@ class Ciudad{
 
         console.log('Medias diarias de entrenos:', dailyAverages);
 
-        // Presentar en el DOM (main o body si no existe)
-        const main = document.querySelector('main') || document.body;
+        const meteorologiaSection = $("<section></section>");
+        meteorologiaSection.append(`<h3>Meteorología de los entrenos (medias diarias)</h3>`);
         for (const d of dailyAverages) {
-            
-            $("main").append(document.createElement("section").innerHTML = `
+            const daySection = $(`<section></section>`).html(`
                 <h4>Día: ${d.date}</h4>
                 <ul>
                     <li>Temperatura media: ${d.avgTemperature} °C</li>
@@ -221,7 +220,10 @@ class Ciudad{
                     <li>Humedad media: ${d.avgHumidity} %</li>
                 </ul>
             `);
+
+            meteorologiaSection.append(daySection);
         }
+        $("main").append(meteorologiaSection);
 
         return {
             location: { latitude, longitude, timezone, elevation },

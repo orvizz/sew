@@ -13,7 +13,8 @@
     <link type="text/css" rel="stylesheet" href="estilo/layout.css" />
     <title>MotoGP</title>
     <link rel="icon" type="image/ico" href="multimedia/imagenes/moto-1.ico" sizes="48x48">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/carrusel.js"></script>
     <script src="js/noticias.js"></script>
@@ -34,20 +35,16 @@
         </nav>
     </header>
     <p>Estás en: <strong>Inicio</strong></p>
-    <article>
-        <script>
-            const carrusel = new Carrusel("MotoGP, Silverstone");
-            const noticias = new Noticias();
-            $(document).ready(async function () {
-                await carrusel.getFotografias();
-                //noticias.buscar();
-                noticias.mockNoticias();
-            });
-            //const fondo = new Fondo();
-        </script>
-    </article>
-    <section>
-    </section>
+    <script>
+        const carrusel = new Carrusel("MotoGP, Silverstone");
+        const noticias = new Noticias();
+        $(document).ready(async function () {
+            await carrusel.getFotografias();
+            noticias.buscar();
+            //noticias.mockNoticias();
+        });
+        //const fondo = new Fondo();
+    </script>
 </body>
 
 </html>

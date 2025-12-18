@@ -57,6 +57,7 @@ nav a:last-child {
     margin-right: 0;
 }
 
+/* Especifidad = 001 */
 table {
     table-layout: fixed;
 
@@ -71,7 +72,7 @@ article h2+img {
     height: auto;
 }
 
-/* Especifidad = 002 */
+/* Especifidad = 003 */
 main>section>img {
     display: block;
     margin: 1rem auto;
@@ -108,14 +109,19 @@ form {
 
     /*Especificidad = 001*/
     header {
+        /* Redefinición de flex-direction para visualización en pantallas pequeñas */
         flex-direction: column;
+        /* Redefinición de align-items para visualización en pantallas pequeñas */
         align-items: flex-start;
     }
 
     /*Especificidad = 002*/
     header nav {
+        /* Redefinicion de justify-content para visualización en pantallas pequeñas */
         justify-content: flex-start;
+        /* Redefinición de flex-direction para visualización en pantallas pequeñas */
         flex-direction: column;
+        /* Redefinición de align-items para visualización en pantallas pequeñas */
         align-items: flex-start;
         font-size: smaller;
     }
@@ -139,6 +145,7 @@ form {
     /* Especifidad = 002 */
     main>div,
     main>svg {
+        /* Redefinición de ancho para pantallas pequeñas */
         width: 100%;
     }
 

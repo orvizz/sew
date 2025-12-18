@@ -189,7 +189,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <label for="pregunta8">Cuál es la marca de la moto del piloto?</label>
             <input type="text" id="pregunta8" name="pregunta8" required>
 
-            <label for="pregunta9">Cauntos puntos consiguió el piloto en la temporada 2024?</label>
+            <label for="pregunta9">Cuantos puntos consiguió el piloto en la temporada 2024?</label>
             <input type="text" id="pregunta9" name="pregunta9" required>
 
             <label for="pregunta10">En que año nació el piloto?</label>
@@ -215,8 +215,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <option value="tablet">Tablet</option>
                 <option value="movil">Móvil</option>
             </select>
-            <label for="observaciones">Observaciones del facilitador:</label><br>
-            <textarea name="observaciones" id="observaciones" rows="6" cols="50" required></textarea><br><br>
+            <label for="observaciones">Observaciones del facilitador:</label>
+            <textarea name="observaciones" id="observaciones" rows="6" cols="50" required></textarea>
             <button type="submit" name="observaciones_facil">Guardar Observaciones</button>
         </form>
     <?php endif; ?>

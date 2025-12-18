@@ -38,43 +38,6 @@ class ObservacionesFacilitador {
         return $nuevoId;
     }
 
-    ///* READ */
-    //public function getById($id) {
-    //    $stmt = $this->conn->prepare("SELECT * FROM observaciones_facilitador WHERE id_observacion = ?");
-    //    $stmt->bind_param("i", $id);
-    //    $stmt->execute();
-    //    return $stmt->get_result()->fetch_assoc();
-    //}
-//
-    //public function getAll() {
-    //    $result = $this->conn->query("SELECT * FROM observaciones_facilitador");
-    //    return $result->fetch_all(MYSQLI_ASSOC);
-    //}
-//
-    //public function getByUser($id_usuario) {
-    //    $stmt = $this->conn->prepare("SELECT * FROM observaciones_facilitador WHERE id_usuario = ?");
-    //    $stmt->bind_param("i", $id_usuario);
-    //    $stmt->execute();
-    //    return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
-    //}
-//
-    ///* UPDATE */
-    //public function update($id, $comentarios) {
-    //    $stmt = $this->conn->prepare("
-    //        UPDATE observaciones_facilitador
-    //        SET comentarios=?
-    //        WHERE id_observacion=?
-    //    ");
-    //    $stmt->bind_param("si", $comentarios, $id);
-    //    return $stmt->execute();
-    //}
-//
-    ///* DELETE */
-    //public function delete($id) {
-    //    $stmt = $this->conn->prepare("DELETE FROM observaciones_facilitador WHERE id_observacion = ?");
-    //    $stmt->bind_param("i", $id);
-    //    return $stmt->execute();
-    //}
 }
 
 ?>
