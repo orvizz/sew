@@ -141,7 +141,7 @@ section article a:hover {
 section article p:last-of-type {
     margin-top: 10px;
     font-size: 0.9em;
-    color: #777;
+    color: #7777776b;
     /* background-color heredado de section article */
 
 }
