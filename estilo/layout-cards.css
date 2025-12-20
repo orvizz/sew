@@ -37,7 +37,7 @@ main p {
 }
 
 
-@media (max-width: 799px) {
+@media (max-width: 1048px) {
 
     /* Especifidad = 001 */
     main {
