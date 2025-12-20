@@ -1,2 +1,10 @@
 ﻿resultado_id,user_id,dispositivo,tiempo,completado,comentarios,valoracion,resultados
-1,1,ordenador,303.589,1,"Ta guapa la web, yo le ponia buena nota a este hombre :)",10,"Johann Zarco@Silverstone@Marco Bezzecchi@Silverstone@Memoria@Towcester (Great Britain)@66 kg@Honda@112@1990"
+1,1,ordenador,203.589,1,"Ta guapa la web, yo le ponia buena nota a este hombre :)",10,"Johann Zarco@Silverstone@Francia@Silverstone@Memoria@Towcester (Great Britain)@66 kg@Honda@112@1990"
+2,1,tablet,238.932,1,"La web se adapta bien a la tablet",10,"Johann Zarco@Silverstone@Francia@Silverstone@Memoria@Towceste@66 kg@Honda@112@1990"
+3,1,movil,246.893,1,"La web se adapta bien al movil, pero se ve mejor en los otros dispositivos",9,"Johann Zarco@Silverstone@Francia@Silverstone@Memoria@Towcester@66@Honda@112@1990"
+4,2,movil,298.251,1,"La información se encuentra muy fácil, menos la de la pregunta 2 que no sale escrito en ningún lado",9,"Johann Zarco@Silverstone@Francia@Silverstone@Memoria@Towcester@66 kg@Honda@112@1990"
+5,3,tablet,272.083,1,"La página web se ve bien pero los botones del menú son un poco pequeños",8,"Johann Zarco@Silverstone@Francia@Silverstone@Memoria@Towcester@66 kg@Honda@112@1990"
+6,4,ordenador,232.599,1,"Preguntas muy diversas y dinámicas",9,"Johann Zarco@Silverstone@Francia@Silverstone@Memoria@Towcester@66 kg@Honda@112@1990"
+7,5,movil,257.001,1,"Una página web bastante completa con información relevante sobre el circuito de Silverstone y sus pilotos más destacados, como Johann Zarco.",10,"Johann Zarco@Silverstone@Francia@Silverstone@Memoria@Towcester@66kg@Honda@112@1990"
+8,6,tablet,249.977,1,"Se encuentra toda la información muy fácilmente",10,"Johann Zarco@Silverstone@Francia@Silverstone@Memoria@Towcester@66 kg@Honda@112@1990"
+9,7,ordenador,215.998,1,"La información se encuentra fácil. Hay 2 preguntas repetidas",9,"Johann Zarco@Silverstone@Francia@Silverstone@Memoria@Towcester@66 kg@Honda@112@1990"

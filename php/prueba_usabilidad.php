@@ -171,7 +171,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <label for="pregunta2">Que circuito aparece en el apartado Circuito?</label>
             <input type="text" id="pregunta2" name="pregunta2" required>
 
-            <label for="pregunta3">Quien es el piloto ganador en el apartado Clasificaciones?</label>
+            <label for="pregunta3">De qué país es el piloto del que se habla en el apartado Piloto?</label>
             <input type="text" id="pregunta3" name="pregunta3" required>
 
             <label for="pregunta4">En el apartado Inicio, de que circuito son las imágenes?</label>
@@ -183,7 +183,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <label for="pregunta6">En el apartado Meteorología, de qué ciudad se aportan los datos meteorológicos?</label>
             <input type="text" id="pregunta6" name="pregunta6" required>
             
-            <label for="pregunta7">Caunto pesa el piloto en el apartado Piloto?</label>
+            <label for="pregunta7">Cuanto pesa el piloto en el apartado Piloto?</label>
             <input type="text" id="pregunta7" name="pregunta7" required>
 
             <label for="pregunta8">Cuál es la marca de la moto del piloto?</label>

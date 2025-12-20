@@ -1,2 +1,10 @@
 ﻿id_observacion,id_usuario,comentarios
 1,1,"El usuario tiene soltura interactuando con la aplicación"
+2,1,"El usuario se maneja bien con la aplicación, encuentra la información rápidamente. Se nota el cambio de ordenador a tablet"
+3,1,"El usuario se maneja bien con la aplicación, encuentra la información rápidamente. Se nota el cambio a móvil, se confunde un par de veces al hacer click en los menús de navegación"
+4,2,"Se encontró la información bastante fluidamente"
+5,3,"Al principio, el usuario estuvo un poco perdido, pero después encontró toda la información con fluidez"
+6,4,"Al principio, la usuaria estaba un poco perdida pero luego respondió rápido"
+7,5,"Usuario muy habilidoso. No se perdió en ningún momento"
+8,6,"El usuario encuentra casi todo a la primera, pero se para a pensar las respuestas antes de ponerlas."
+9,7,"La usuaria contesta a todas las preguntas bien, pero confunde la pregunta 2, ya que contesta a la 2 y a la 4 sacando la información de Inicio en vez de visitar el apartado Circuito"

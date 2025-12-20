@@ -61,7 +61,7 @@ header nav a {
 header nav a:hover {
     color: #fff067;
     /* Hereda background-color de header */
-    font-size: large;
+    font-size: 26px;
 }
 
 /* Especificidad = 001 */
