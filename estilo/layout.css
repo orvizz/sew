@@ -43,7 +43,7 @@ header nav {
     justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
-    font-size: 24px;
+    font-size: 1.5em;
 }
 
 /* Especifidad = 002 */
@@ -145,7 +145,7 @@ form {
         /* Redefinición de align-items para visualización en pantallas pequeñas */
         align-items: flex-start;
         /* Redefinición de font-size para visualización en pantallas pequeñas */
-        font-size: 18px;
+        font-size: 1.2em;
     }
 
     /* Especifidad = 002 */

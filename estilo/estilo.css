@@ -61,7 +61,7 @@ header nav a {
 header nav a:hover {
     color: #fff067;
     /* Hereda background-color de header */
-    font-size: 26px;
+    font-size: 1.2em;
 }
 
 /* Especificidad = 001 */
@@ -90,23 +90,23 @@ tbody, td {
 section article {
     background: #ffffff;
     /* Color heredado de body */
-    border-radius: 12px;
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0px 2px 6px rgba(0,0,0,0.08);
+    border-radius: 0.4em;
+    padding: 1em;
+    border: 0.1em solid #e0e0e0;
+    box-shadow: 0em 0.125em 0.375em rgba(0,0,0,0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Especifidad = 012 */
 section article:hover {
     transform: translateY(-3px);
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0em 0.25em 0.75em rgba(0,0,0,0.15);
 }
 
 /* Especifidad = 003 */
 section article h3 {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
     font-size: 1.3em;
     color: #333;
     /* background-color heredado de section article */
@@ -115,7 +115,7 @@ section article h3 {
 
 /* Especifidad = 003 */
 section article p {
-    margin: 5px 0;
+    margin: 0.3125em 0;
     color: #444;
     /* background-color heredado de section article */
     line-height: 1.4em;
@@ -125,7 +125,7 @@ section article p {
 /* Especifidad = 003 */
 section article a {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 0.625em;
     font-weight: bold;
     text-decoration: none;
     color: #0066cc;
@@ -139,8 +139,7 @@ section article a:hover {
 
 /* Especifidad = 013 */
 section article p:last-of-type {
-    margin-top: 10px;
+    margin-top: 0.625em;
     font-size: 0.9em;
-    /* background-color heredado de section article */
-
+    /* background-color y color heredado de section article */
 }

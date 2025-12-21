@@ -18,7 +18,7 @@ class Carrusel {
     }
 
     async getFotografias() {
-        $.ajax({
+        return $.ajax({
             dataType: "jsonp",
             jsonp: "jsoncallback",
             jsonpCallback: "jsonFlickrFeed",
